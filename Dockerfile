@@ -14,10 +14,12 @@ RUN apk add build-base
 RUN apk add postgresql-dev gcc python3-dev musl-dev
 
 
-# ENV FLASK_APP=app
-# ENV FLASK_ENV=production
-# ENV FLASK_DEBUG=false
+ARG FLASK_APP
+ARG FLASK_ENV
+ARG FLASK_DEBUG
 ARG DATABASE_URL
+ARG REACT_APP_BASE_URL
+ARG SCHEMA
 
 WORKDIR /var/www
 
