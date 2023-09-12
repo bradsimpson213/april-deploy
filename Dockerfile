@@ -14,9 +14,10 @@ RUN apk add build-base
 RUN apk add postgresql-dev gcc python3-dev musl-dev
 
 
-ENV FLASK_APP=app
-ENV FLASK_ENV=production
-ENV FLASK_DEBUG=false
+# ENV FLASK_APP=app
+# ENV FLASK_ENV=production
+# ENV FLASK_DEBUG=false
+ARG DATABASE_URL
 
 WORKDIR /var/www
 
